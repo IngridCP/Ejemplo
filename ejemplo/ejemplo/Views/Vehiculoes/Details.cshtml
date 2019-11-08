@@ -1,0 +1,42 @@
+﻿@model ejemplo.Models.DATA.DDL.Vehiculo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vehiculo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.placa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.placa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoVehiculo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tipoVehiculo.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.clientes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.clientes.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
